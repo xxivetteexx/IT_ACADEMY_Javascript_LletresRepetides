@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ivette Parejo" />
+    <title>Fase 2</title>
+</head>
+<body>
+    <script>
+    
+    const returnObject = {};
+    // Declaro el nombre
+    let name = "IVETTE";
+    //Divido el nombre en strings
+    let nameSplit = name.split('');
+
+    // Almaceno los datos de nameSplit en un map y aplico la funcion anónima
+    let nameLetters = nameSplit.map(function(character){
+        // si el objeto tiene la propiedad character, sumar +1, si no, es que aparece solo una vez
+        if (returnObject.hasOwnProperty(character)) {
+            returnObject[character] += 1;
+        } else {
+            returnObject[character] = 1;
+        }
+    });
+
+// Mostrar el  objeto por consola
+console.log(returnObject);
+    
+</script>
+</body>
+</html>
